@@ -5,7 +5,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
          version="2.4">
   
-  <context-param>
+ <context-param>
     <param-name>greenmail.portOffset</param-name>
     <param-value>10000</param-value>
   </context-param>
@@ -24,6 +24,22 @@
   <context-param>
     <param-name>greenmail.pop3.port</param-name>
     <param-value>10110</param-value>
+  </context-param>
+    <context-param>
+    <param-name>greenmail.imap.host</param-name>
+    <param-value>127.0.0.1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>greenmail.imap.port</param-name>
+    <param-value>10143</param-value>
+  </context-param>
+    <context-param>
+    <param-name>greenmail.imaps.host</param-name>
+    <param-value>127.0.0.1</param-value>
+  </context-param>
+  <context-param>
+    <param-name>greenmail.imaps.port</param-name>
+    <param-value>10993</param-value>
   </context-param>
   <context-param>
     <param-name>greenmail.users</param-name>

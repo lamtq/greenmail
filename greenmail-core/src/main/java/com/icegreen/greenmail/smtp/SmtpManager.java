@@ -37,13 +37,19 @@ public class SmtpManager {
 
 
     public String checkSender(SmtpState state, MailAddress sender) {
-        //always ok
+//    	GreenMailUser user = userManager.getUserByEmail(sender.getEmail());
+//    	if (user == null) {
+//    		return "550 No Such User Here";
+//    	}
+    	//always true
         return null;
     }
 
     public String checkRecipient(SmtpState state, MailAddress rcpt) {
-        // todo?
-//        MailAddress sender = state.getMessage().getReturnPath();
+    	GreenMailUser user = userManager.getUserByEmail(rcpt.getEmail());
+    	if (user == null) {
+    		return "550 No Such User Here";
+    	}
         return null;
     }
 

@@ -39,7 +39,7 @@ public class GreenMailListener implements ServletContextListener {
             if (null == greenMailUser) {
                 try {
                     greenMailUser = managers.getUserManager().createUser(
-                            user.email, user.login, user.password);
+                            user.email, user.email, user.password);
                     greenMailUser.setPassword(user.password);
                 } catch (UserException e) {
                     throw new RuntimeException(e);
